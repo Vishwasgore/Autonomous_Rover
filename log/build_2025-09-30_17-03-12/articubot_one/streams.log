@@ -1,0 +1,32 @@
+[0.018s] Invoking command in '/home/notsoadmin/dev_ws/build/articubot_one': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/notsoadmin/dev_ws/build/articubot_one -- -j16 -l16
+[0.187s] Invoked command in '/home/notsoadmin/dev_ws/build/articubot_one' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/notsoadmin/dev_ws/build/articubot_one -- -j16 -l16
+[0.198s] Invoking command in '/home/notsoadmin/dev_ws/build/articubot_one': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/notsoadmin/dev_ws/build/articubot_one
+[0.208s] -- Install configuration: ""
+[0.210s] -- Execute custom install script
+[0.210s] -- Up-to-date symlink: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/config/drive_bot.rviz
+[0.211s] -- Up-to-date symlink: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/config/empty.yaml
+[0.211s] -- Up-to-date symlink: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/config/view_bot.rviz
+[0.211s] -- Up-to-date symlink: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/description/gazebo_control.xacro
+[0.212s] -- Up-to-date symlink: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/description/inertial_macros.xacro
+[0.212s] -- Up-to-date symlink: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/description/robot.urdf.xacro
+[0.212s] -- Up-to-date symlink: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/description/robot_core.xacro
+[0.212s] -- Up-to-date symlink: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/launch/launch_sim.launch.py
+[0.212s] -- Up-to-date symlink: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/launch/rsp.launch.py
+[0.213s] -- Up-to-date symlink: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/worlds/empty.world
+[0.213s] -- Up-to-date symlink: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/worlds/obstacles.world
+[0.213s] -- Up-to-date symlink: /home/notsoadmin/dev_ws/install/articubot_one/share/ament_index/resource_index/package_run_dependencies/articubot_one
+[0.213s] -- Up-to-date symlink: /home/notsoadmin/dev_ws/install/articubot_one/share/ament_index/resource_index/parent_prefix_path/articubot_one
+[0.213s] -- Up-to-date symlink: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/environment/ament_prefix_path.sh
+[0.214s] -- Up-to-date symlink: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/environment/ament_prefix_path.dsv
+[0.214s] -- Up-to-date symlink: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/environment/path.sh
+[0.214s] -- Up-to-date symlink: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/environment/path.dsv
+[0.214s] -- Up-to-date symlink: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/local_setup.bash
+[0.214s] -- Up-to-date symlink: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/local_setup.sh
+[0.215s] -- Up-to-date symlink: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/local_setup.zsh
+[0.215s] -- Up-to-date symlink: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/local_setup.dsv
+[0.215s] -- Symlinking: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/package.dsv
+[0.226s] -- Up-to-date symlink: /home/notsoadmin/dev_ws/install/articubot_one/share/ament_index/resource_index/packages/articubot_one
+[0.227s] -- Up-to-date symlink: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/cmake/articubot_oneConfig.cmake
+[0.227s] -- Up-to-date symlink: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/cmake/articubot_oneConfig-version.cmake
+[0.227s] -- Up-to-date symlink: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/package.xml
+[0.230s] Invoked command in '/home/notsoadmin/dev_ws/build/articubot_one' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/notsoadmin/dev_ws/build/articubot_one

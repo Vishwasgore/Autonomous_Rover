@@ -1,0 +1,36 @@
+services:
+  ros-humble:
+    image: osrf/ros:humble-desktop-full
+    container_name: ros-humble
+    restart: no
+    network_mode: host
+    ipc: host
+    hostname: ros-humble
+    user: "1000:1000"
+    environment:
+      - DISPLAY=${DISPLAY}
+      - QT_X11_NO_MITSHM=1
+      - XDG_RUNTIME_DIR=$XDG_RUNTIME_DIR
+    devices:
+      - /dev/dri:/dev/dri
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      - /home/karan/Downloads/Ros_LTI:/home/notsoadmin/dev_ws
+    working_dir: "/home/notsoadmin/dev_ws"
+    stdin_open: true
+    tty: true
+
+# xhost +local:docker -> Add non-network local connections in ACL
+# xhost -local:docker -> Remove non-network local connections in ACL
+# On first run, set source ros_entrypoint.sh
+# Install apt install -y ros-humble-joint-state-publisher-gui
+# Install apt install -y ros-humble-gazebo-ros-pkgs
+
+# To launch -> source ./dev_ws/install/setup.bash; then ros2 launch articubot_one rsp.launch.py
+
+#  --env="XDG_RUNTIME_DIR=$XDG_RUNTIME_DIR" \
+
+# Launch bot: ros2 launch articubot_one rsp.launch.py use_sim_time:=true
+# Launch gazebo with obstacles: ros2 launch gazebo_ros gazebo.launch.py world:=./src/articubot_one/worlds/obstacles.world
+# Launch entity in gazebo: ros2 run gazebo_ros spawn_entity.py -topic robot_description -entity bottybot
+# Keyboard ctrl: ros2 run teleop_twist_keyboard teleop_twist_keyboard

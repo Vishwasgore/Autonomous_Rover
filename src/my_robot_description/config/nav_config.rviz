@@ -1,0 +1,21 @@
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Class: rviz/RobotModel
+      Enabled: true
+      Name: RobotModel
+      Robot Description: robot_description
+    - Class: rviz/Map
+      Enabled: true
+      Name: Map
+      Topic: /map
+    - Class: rviz/LaserScan
+      Enabled: true
+      Name: LaserScan
+      Topic: /scan
+      Size (m): 0.1
+    - Class: rviz/TF
+      Enabled: true
+      Name: TF
+  Enabled: true
+  Name: root

@@ -3,6 +3,7 @@
 /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/config/view_bot.rviz
 /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/description/gazebo_control.xacro
 /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/description/inertial_macros.xacro
+/home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/description/lidar.xacro
 /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/description/robot.urdf.xacro
 /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/description/robot_core.xacro
 /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/launch/launch_sim.launch.py

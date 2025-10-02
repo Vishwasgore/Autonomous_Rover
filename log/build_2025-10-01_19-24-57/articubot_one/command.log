@@ -1,0 +1,6 @@
+Invoking command in '/home/notsoadmin/dev_ws/build/articubot_one': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/notsoadmin/dev_ws/src/articubot_one -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/notsoadmin/dev_ws/install/articubot_one
+Invoked command in '/home/notsoadmin/dev_ws/build/articubot_one' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/notsoadmin/dev_ws/src/articubot_one -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/notsoadmin/dev_ws/install/articubot_one
+Invoking command in '/home/notsoadmin/dev_ws/build/articubot_one': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/notsoadmin/dev_ws/build/articubot_one -- -j16 -l16
+Invoked command in '/home/notsoadmin/dev_ws/build/articubot_one' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/notsoadmin/dev_ws/build/articubot_one -- -j16 -l16
+Invoking command in '/home/notsoadmin/dev_ws/build/articubot_one': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/notsoadmin/dev_ws/build/articubot_one
+Invoked command in '/home/notsoadmin/dev_ws/build/articubot_one' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/notsoadmin/dev_ws/build/articubot_one

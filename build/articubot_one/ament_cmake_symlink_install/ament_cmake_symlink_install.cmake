@@ -354,3 +354,6 @@ ament_cmake_symlink_install_files("/home/notsoadmin/dev_ws/src/articubot_one" FI
 
 # install(FILES "/home/notsoadmin/dev_ws/src/articubot_one/package.xml" "DESTINATION" "share/articubot_one")
 ament_cmake_symlink_install_files("/home/notsoadmin/dev_ws/src/articubot_one" FILES "/home/notsoadmin/dev_ws/src/articubot_one/package.xml" "DESTINATION" "share/articubot_one")
+
+# install(DIRECTORY "launch" "config" "DESTINATION" "share/${PROJECT_NAME}")
+ament_cmake_symlink_install_directory("/home/notsoadmin/dev_ws/src/articubot_one" DIRECTORY "launch" "config" "DESTINATION" "share/${PROJECT_NAME}")

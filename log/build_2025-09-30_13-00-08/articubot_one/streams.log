@@ -1,5 +1,0 @@
-[0.022s] Invoking command in '/home/notsoadmin/dev_ws/build/articubot_one': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/notsoadmin/dev_ws/build/articubot_one -- -j16 -l16
-[0.058s] [0mCMake Error: The source directory "/home/notsoadmin/dev_ws/src/articubot_one" does not exist.
-[0.058s] Specify --help for usage, or press the help button on the CMake GUI.[0m
-[0.060s] gmake: *** [Makefile:226: cmake_check_build_system] Error 1
-[0.067s] Invoked command in '/home/notsoadmin/dev_ws/build/articubot_one' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/notsoadmin/dev_ws/build/articubot_one -- -j16 -l16

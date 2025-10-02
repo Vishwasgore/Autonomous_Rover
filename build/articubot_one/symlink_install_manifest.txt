@@ -1,5 +1,6 @@
 /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/config/drive_bot.rviz
 /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/config/empty.yaml
+/home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/config/mapper_params_online_async.yaml
 /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/config/view_bot.rviz
 /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/description/gazebo_control.xacro
 /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/description/inertial_macros.xacro
@@ -7,6 +8,7 @@
 /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/description/robot.urdf.xacro
 /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/description/robot_core.xacro
 /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/launch/launch_sim.launch.py
+/home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/launch/online_async_slam.launch.py
 /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/launch/rsp.launch.py
 /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/worlds/empty.world
 /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/worlds/obstacles.world
@@ -25,3 +27,10 @@
 /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/cmake/articubot_oneConfig.cmake
 /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/cmake/articubot_oneConfig-version.cmake
 /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/package.xml
+/home/notsoadmin/dev_ws/install/articubot_one/share//launch/launch_sim.launch.py
+/home/notsoadmin/dev_ws/install/articubot_one/share//launch/online_async_slam.launch.py
+/home/notsoadmin/dev_ws/install/articubot_one/share//launch/rsp.launch.py
+/home/notsoadmin/dev_ws/install/articubot_one/share//config/drive_bot.rviz
+/home/notsoadmin/dev_ws/install/articubot_one/share//config/empty.yaml
+/home/notsoadmin/dev_ws/install/articubot_one/share//config/mapper_params_online_async.yaml
+/home/notsoadmin/dev_ws/install/articubot_one/share//config/view_bot.rviz

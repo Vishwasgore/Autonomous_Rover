@@ -1,0 +1,74 @@
+[0.013s] Invoking command in '/home/notsoadmin/dev_ws/build/articubot_one': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/notsoadmin/dev_ws/src/articubot_one -DCMAKE_INSTALL_PREFIX=/home/notsoadmin/dev_ws/install/articubot_one
+[0.085s] -- The C compiler identification is GNU 11.4.0
+[0.168s] -- The CXX compiler identification is GNU 11.4.0
+[0.178s] -- Detecting C compiler ABI info
+[0.315s] -- Detecting C compiler ABI info - done
+[0.324s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.324s] -- Detecting C compile features
+[0.325s] -- Detecting C compile features - done
+[0.329s] -- Detecting CXX compiler ABI info
+[0.444s] -- Detecting CXX compiler ABI info - done
+[0.454s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.454s] -- Detecting CXX compile features
+[0.455s] -- Detecting CXX compile features - done
+[0.464s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.686s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.839s] -- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.969s] -- Added test 'copyright' to check source files copyright and LICENSE
+[0.973s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.974s] -- Added test 'lint_cmake' to check CMake code style
+[0.975s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[0.977s] -- Added test 'xmllint' to check XML markup files
+[0.978s] -- Configuring done
+[0.982s] -- Generating done
+[0.985s] -- Build files have been written to: /home/notsoadmin/dev_ws/build/articubot_one
+[0.990s] Invoked command in '/home/notsoadmin/dev_ws/build/articubot_one' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/notsoadmin/dev_ws/src/articubot_one -DCMAKE_INSTALL_PREFIX=/home/notsoadmin/dev_ws/install/articubot_one
+[0.993s] Invoking command in '/home/notsoadmin/dev_ws/build/articubot_one': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/notsoadmin/dev_ws/build/articubot_one -- -j16 -l16
+[1.051s] Invoked command in '/home/notsoadmin/dev_ws/build/articubot_one' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/notsoadmin/dev_ws/build/articubot_one -- -j16 -l16
+[1.064s] Invoking command in '/home/notsoadmin/dev_ws/build/articubot_one': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/notsoadmin/dev_ws/build/articubot_one
+[1.074s] -- Install configuration: ""
+[1.075s] -- Installing: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/config
+[1.075s] -- Installing: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/config/empty.yaml
+[1.075s] -- Installing: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/config/mapper_params_online_async.yaml
+[1.075s] -- Installing: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/config/new_bot.rviz
+[1.075s] -- Installing: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/config/drive_bot.rviz
+[1.075s] -- Installing: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/config/view_bot.rviz
+[1.075s] -- Installing: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/description
+[1.075s] -- Installing: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/description/lidar.xacro
+[1.075s] -- Installing: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/description/gazebo_control.xacro
+[1.075s] -- Installing: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/description/inertial_macros.xacro
+[1.076s] -- Installing: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/description/robot_core.xacro
+[1.076s] -- Installing: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/description/robot.urdf.xacro
+[1.076s] -- Installing: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/launch
+[1.076s] -- Installing: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/launch/rsp.launch.py
+[1.076s] -- Installing: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/launch/online_async_slam.launch.py
+[1.076s] -- Installing: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/launch/launch_sim.launch.py
+[1.076s] -- Installing: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/worlds
+[1.076s] -- Installing: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/worlds/empty.world
+[1.076s] -- Installing: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/worlds/obstacles.world
+[1.077s] -- Installing: /home/notsoadmin/dev_ws/install/articubot_one/share/ament_index/resource_index/package_run_dependencies/articubot_one
+[1.077s] -- Installing: /home/notsoadmin/dev_ws/install/articubot_one/share/ament_index/resource_index/parent_prefix_path/articubot_one
+[1.077s] -- Installing: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/environment/ament_prefix_path.sh
+[1.077s] -- Installing: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/environment/ament_prefix_path.dsv
+[1.077s] -- Installing: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/environment/path.sh
+[1.077s] -- Installing: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/environment/path.dsv
+[1.077s] -- Installing: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/local_setup.bash
+[1.077s] -- Installing: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/local_setup.sh
+[1.078s] -- Installing: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/local_setup.zsh
+[1.078s] -- Installing: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/local_setup.dsv
+[1.078s] -- Installing: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/package.dsv
+[1.078s] -- Installing: /home/notsoadmin/dev_ws/install/articubot_one/share/ament_index/resource_index/packages/articubot_one
+[1.078s] -- Installing: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/cmake/articubot_oneConfig.cmake
+[1.078s] -- Installing: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/cmake/articubot_oneConfig-version.cmake
+[1.078s] -- Installing: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/package.xml
+[1.078s] -- Installing: /home/notsoadmin/dev_ws/install/articubot_one/share//launch
+[1.078s] -- Installing: /home/notsoadmin/dev_ws/install/articubot_one/share//launch/rsp.launch.py
+[1.079s] -- Installing: /home/notsoadmin/dev_ws/install/articubot_one/share//launch/online_async_slam.launch.py
+[1.079s] -- Installing: /home/notsoadmin/dev_ws/install/articubot_one/share//launch/launch_sim.launch.py
+[1.079s] -- Installing: /home/notsoadmin/dev_ws/install/articubot_one/share//config
+[1.079s] -- Installing: /home/notsoadmin/dev_ws/install/articubot_one/share//config/empty.yaml
+[1.079s] -- Installing: /home/notsoadmin/dev_ws/install/articubot_one/share//config/mapper_params_online_async.yaml
+[1.079s] -- Installing: /home/notsoadmin/dev_ws/install/articubot_one/share//config/new_bot.rviz
+[1.079s] -- Installing: /home/notsoadmin/dev_ws/install/articubot_one/share//config/drive_bot.rviz
+[1.079s] -- Installing: /home/notsoadmin/dev_ws/install/articubot_one/share//config/view_bot.rviz
+[1.082s] Invoked command in '/home/notsoadmin/dev_ws/build/articubot_one' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/notsoadmin/dev_ws/build/articubot_one

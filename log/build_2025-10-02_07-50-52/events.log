@@ -1,0 +1,58 @@
+[0.000000] (-) TimerEvent: {}
+[0.000740] (articubot_one) JobQueued: {'identifier': 'articubot_one', 'dependencies': OrderedDict()}
+[0.001030] (articubot_one) JobStarted: {'identifier': 'articubot_one'}
+[0.012184] (articubot_one) JobProgress: {'identifier': 'articubot_one', 'progress': 'cmake'}
+[0.013137] (articubot_one) JobProgress: {'identifier': 'articubot_one', 'progress': 'build'}
+[0.014209] (articubot_one) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/notsoadmin/dev_ws/build/articubot_one', '--', '-j16', '-l16'], 'cwd': '/home/notsoadmin/dev_ws/build/articubot_one', 'env': OrderedDict([('HOSTNAME', 'ros-humble'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/notsoadmin'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/home/notsoadmin/dev_ws/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('XDG_RUNTIME_DIR', '/run/user/0'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('AMENT_PREFIX_PATH', '/home/notsoadmin/dev_ws/install/articubot_one:/opt/ros/humble'), ('PWD', '/home/notsoadmin/dev_ws/build/articubot_one'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/notsoadmin/dev_ws/install/articubot_one:/opt/ros/humble')]), 'shell': False}
+[0.068734] (articubot_one) CommandEnded: {'returncode': 0}
+[0.069719] (articubot_one) JobProgress: {'identifier': 'articubot_one', 'progress': 'install'}
+[0.081788] (articubot_one) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/notsoadmin/dev_ws/build/articubot_one'], 'cwd': '/home/notsoadmin/dev_ws/build/articubot_one', 'env': OrderedDict([('HOSTNAME', 'ros-humble'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/notsoadmin'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/home/notsoadmin/dev_ws/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('XDG_RUNTIME_DIR', '/run/user/0'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('AMENT_PREFIX_PATH', '/home/notsoadmin/dev_ws/install/articubot_one:/opt/ros/humble'), ('PWD', '/home/notsoadmin/dev_ws/build/articubot_one'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/notsoadmin/dev_ws/install/articubot_one:/opt/ros/humble')]), 'shell': False}
+[0.094226] (articubot_one) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.094450] (articubot_one) StdoutLine: {'line': b'-- Up-to-date: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/config\n'}
+[0.094779] (articubot_one) StdoutLine: {'line': b'-- Up-to-date: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/config/empty.yaml\n'}
+[0.095026] (articubot_one) StdoutLine: {'line': b'-- Up-to-date: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/config/mapper_params_online_async.yaml\n'}
+[0.095123] (articubot_one) StdoutLine: {'line': b'-- Up-to-date: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/config/new_bot.rviz\n'}
+[0.095234] (articubot_one) StdoutLine: {'line': b'-- Up-to-date: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/config/drive_bot.rviz\n'}
+[0.095463] (articubot_one) StdoutLine: {'line': b'-- Up-to-date: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/config/view_bot.rviz\n'}
+[0.095545] (articubot_one) StdoutLine: {'line': b'-- Up-to-date: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/description\n'}
+[0.095656] (articubot_one) StdoutLine: {'line': b'-- Up-to-date: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/description/lidar.xacro\n'}
+[0.095775] (articubot_one) StdoutLine: {'line': b'-- Up-to-date: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/description/gazebo_control.xacro\n'}
+[0.095850] (articubot_one) StdoutLine: {'line': b'-- Up-to-date: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/description/inertial_macros.xacro\n'}
+[0.095926] (articubot_one) StdoutLine: {'line': b'-- Up-to-date: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/description/robot_core.xacro\n'}
+[0.095999] (articubot_one) StdoutLine: {'line': b'-- Up-to-date: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/description/robot.urdf.xacro\n'}
+[0.096070] (articubot_one) StdoutLine: {'line': b'-- Up-to-date: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/launch\n'}
+[0.096141] (articubot_one) StdoutLine: {'line': b'-- Up-to-date: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/launch/rsp.launch.py\n'}
+[0.096338] (articubot_one) StdoutLine: {'line': b'-- Up-to-date: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/launch/online_async_slam.launch.py\n'}
+[0.096425] (articubot_one) StdoutLine: {'line': b'-- Installing: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/launch/launch_sim.launch.py\n'}
+[0.096494] (articubot_one) StdoutLine: {'line': b'-- Up-to-date: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/worlds\n'}
+[0.096561] (articubot_one) StdoutLine: {'line': b'-- Up-to-date: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/worlds/empty.world\n'}
+[0.096627] (articubot_one) StdoutLine: {'line': b'-- Up-to-date: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/worlds/obstacles.world\n'}
+[0.096695] (articubot_one) StdoutLine: {'line': b'-- Up-to-date: /home/notsoadmin/dev_ws/install/articubot_one/share/ament_index/resource_index/package_run_dependencies/articubot_one\n'}
+[0.096763] (articubot_one) StdoutLine: {'line': b'-- Up-to-date: /home/notsoadmin/dev_ws/install/articubot_one/share/ament_index/resource_index/parent_prefix_path/articubot_one\n'}
+[0.096829] (articubot_one) StdoutLine: {'line': b'-- Up-to-date: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/environment/ament_prefix_path.sh\n'}
+[0.096895] (articubot_one) StdoutLine: {'line': b'-- Up-to-date: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/environment/ament_prefix_path.dsv\n'}
+[0.096960] (articubot_one) StdoutLine: {'line': b'-- Up-to-date: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/environment/path.sh\n'}
+[0.097028] (articubot_one) StdoutLine: {'line': b'-- Up-to-date: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/environment/path.dsv\n'}
+[0.097096] (articubot_one) StdoutLine: {'line': b'-- Up-to-date: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/local_setup.bash\n'}
+[0.097161] (articubot_one) StdoutLine: {'line': b'-- Up-to-date: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/local_setup.sh\n'}
+[0.097282] (articubot_one) StdoutLine: {'line': b'-- Up-to-date: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/local_setup.zsh\n'}
+[0.097388] (articubot_one) StdoutLine: {'line': b'-- Up-to-date: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/local_setup.dsv\n'}
+[0.097462] (articubot_one) StdoutLine: {'line': b'-- Installing: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/package.dsv\n'}
+[0.097533] (articubot_one) StdoutLine: {'line': b'-- Up-to-date: /home/notsoadmin/dev_ws/install/articubot_one/share/ament_index/resource_index/packages/articubot_one\n'}
+[0.097645] (articubot_one) StdoutLine: {'line': b'-- Up-to-date: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/cmake/articubot_oneConfig.cmake\n'}
+[0.097760] (articubot_one) StdoutLine: {'line': b'-- Up-to-date: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/cmake/articubot_oneConfig-version.cmake\n'}
+[0.097895] (articubot_one) StdoutLine: {'line': b'-- Up-to-date: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/package.xml\n'}
+[0.097994] (articubot_one) StdoutLine: {'line': b'-- Up-to-date: /home/notsoadmin/dev_ws/install/articubot_one/share//launch\n'}
+[0.098069] (articubot_one) StdoutLine: {'line': b'-- Up-to-date: /home/notsoadmin/dev_ws/install/articubot_one/share//launch/rsp.launch.py\n'}
+[0.098140] (articubot_one) StdoutLine: {'line': b'-- Up-to-date: /home/notsoadmin/dev_ws/install/articubot_one/share//launch/online_async_slam.launch.py\n'}
+[0.098391] (articubot_one) StdoutLine: {'line': b'-- Installing: /home/notsoadmin/dev_ws/install/articubot_one/share//launch/launch_sim.launch.py\n'}
+[0.098470] (articubot_one) StdoutLine: {'line': b'-- Up-to-date: /home/notsoadmin/dev_ws/install/articubot_one/share//config\n'}
+[0.098543] (articubot_one) StdoutLine: {'line': b'-- Up-to-date: /home/notsoadmin/dev_ws/install/articubot_one/share//config/empty.yaml\n'}
+[0.098765] (articubot_one) StdoutLine: {'line': b'-- Up-to-date: /home/notsoadmin/dev_ws/install/articubot_one/share//config/mapper_params_online_async.yaml\n'}
+[0.098964] (articubot_one) StdoutLine: {'line': b'-- Up-to-date: /home/notsoadmin/dev_ws/install/articubot_one/share//config/new_bot.rviz\n'}
+[0.099151] (articubot_one) StdoutLine: {'line': b'-- Up-to-date: /home/notsoadmin/dev_ws/install/articubot_one/share//config/drive_bot.rviz\n'}
+[0.099263] (articubot_one) StdoutLine: {'line': b'-- Up-to-date: /home/notsoadmin/dev_ws/install/articubot_one/share//config/view_bot.rviz\n'}
+[0.099795] (articubot_one) CommandEnded: {'returncode': 0}
+[0.100351] (-) TimerEvent: {}
+[0.128743] (articubot_one) JobEnded: {'identifier': 'articubot_one', 'rc': 0}
+[0.129739] (-) EventReactorShutdown: {}

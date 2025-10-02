@@ -1,2 +1,0 @@
-Invoking command in '/home/notsoadmin/dev_ws/build/articubot_one': /usr/bin/cmake /home/notsoadmin/dev_ws/src/articubot_one -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/notsoadmin/dev_ws/install/articubot_one
-Invoked command in '/home/notsoadmin/dev_ws/build/articubot_one' returned '1': /usr/bin/cmake /home/notsoadmin/dev_ws/src/articubot_one -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/notsoadmin/dev_ws/install/articubot_one

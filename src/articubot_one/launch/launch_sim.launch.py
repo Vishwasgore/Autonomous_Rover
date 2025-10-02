@@ -7,15 +7,18 @@ from launch_ros.actions import Node
 
 def generate_launch_description():
     package_name = 'articubot_one'
-    
-    # Get the path to the world file
+
+    # --- Paths ---
     world_file = os.path.join(
-        get_package_share_directory(package_name),
-        'worlds',
-        'obstacles.world'
+        get_package_share_directory(package_name), 'worlds', 'obstacles.world'
     )
+    rviz_config_file = os.path.join(
+        get_package_share_directory(package_name), 'config', 'drive_bot.rviz'
+    )
+
+    # --- Nodes and Launch Includes ---
     
-    # Robot State Publisher with sim time
+    # Robot State Publisher
     rsp = IncludeLaunchDescription(
         PythonLaunchDescriptionSource([os.path.join(
             get_package_share_directory(package_name), 'launch', 'rsp.launch.py'
@@ -23,37 +26,60 @@ def generate_launch_description():
         launch_arguments={'use_sim_time': 'true'}.items()
     )
     
-    # Gazebo launch with the obstacles world
+    # Gazebo
     gazebo = IncludeLaunchDescription(
         PythonLaunchDescriptionSource([os.path.join(
             get_package_share_directory('gazebo_ros'), 'launch', 'gazebo.launch.py'
         )]),
-        launch_arguments={
-            'world': world_file,
-            'verbose': 'true'
-        }.items()
+        launch_arguments={'world': world_file, 'verbose': 'true'}.items()
     )
     
-    # Spawn the robot entity
+    # Spawn Entity
     spawn_entity = Node(
         package='gazebo_ros',
         executable='spawn_entity.py',
-        arguments=['-topic', 'robot_description', '-entity', 'bottybot'],
+        arguments=['-topic', 'robot_description', '-entity', 'my_bot'],
         output='screen'
     )
 
-    # Add the SLAM launch file to your main launch
-    slam = IncludeLaunchDescription(
-                PythonLaunchDescriptionSource([os.path.join(
-                    get_package_share_directory(package_name),'launch','online_async_slam.launch.py'
-                )]), launch_arguments={'use_sim_time': 'true'}.items()
+    # Spawner for the Differential Drive Controller
+    diff_drive_spawner = Node(
+        package="controller_manager",
+        executable="spawner",
+        arguments=["diff_drive_controller"],
     )
 
+    # Spawner for the Joint State Broadcaster
+    joint_broad_spawner = Node(
+        package="controller_manager",
+        executable="spawner",
+        arguments=["joint_state_broadcaster"],
+    )
 
-    
+    # SLAM Toolbox
+    slam = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource([os.path.join(
+            get_package_share_directory(package_name),'launch','online_async_slam.launch.py'
+        )]), 
+        launch_arguments={'use_sim_time': 'true'}.items()
+    )
+
+    # Rviz2
+    rviz_node = Node(
+        package='rviz2',
+        executable='rviz2',
+        name='rviz2',
+        arguments=['-d', rviz_config_file],
+        output='screen'
+    )
+
+    # --- LaunchDescription Return ---
     return LaunchDescription([
         rsp,
         gazebo,
         spawn_entity,
-        slam
+        diff_drive_spawner,
+        joint_broad_spawner,
+        slam,
+        rviz_node
     ])

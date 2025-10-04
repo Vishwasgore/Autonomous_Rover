@@ -4,23 +4,31 @@ from launch import LaunchDescription
 from launch_ros.actions import Node
 from launch.actions import IncludeLaunchDescription
 from launch.launch_description_sources import PythonLaunchDescriptionSource
+from launch.actions import SetEnvironmentVariable
 
 def generate_launch_description():
     package_name = 'articubot_one'
 
-    # Robot State Publisher - NO ros2_control for real hardware
+    # Set use_sim_time to false for real hardware
+    use_sim_time = 'false'
+
+    # Robot State Publisher
     rsp = IncludeLaunchDescription(
         PythonLaunchDescriptionSource([os.path.join(
             get_package_share_directory(package_name),'launch','rsp.launch.py'
-        )]), launch_arguments={'use_sim_time': 'false', 'use_ros2_control': 'false'}.items()
+        )]), launch_arguments={
+            'use_sim_time': use_sim_time, 
+            'use_ros2_control': 'false'
+        }.items()
     )
 
-    # GPIO Motor Controller (REAL HARDWARE) - REPLACES ros2_control
+    # GPIO Motor Controller
     motor_controller = Node(
         package=package_name,
         executable='motor_controller.py',
         name='motor_controller',
-        output='screen'
+        output='screen',
+        parameters=[{'use_sim_time': use_sim_time}]
     )
 
     # Keyboard control
@@ -30,7 +38,7 @@ def generate_launch_description():
         )])
     )
 
-    # RPLIDAR (Real sensor)
+    # RPLIDAR
     rplidar = Node(
         package='rplidar_ros',
         executable='rplidar_node',
@@ -39,7 +47,8 @@ def generate_launch_description():
             'serial_port': '/dev/ttyUSB0',
             'frame_id': 'laser_frame',
             'angle_compensate': True,
-            'scan_mode': 'Standard'
+            'scan_mode': 'Standard',
+            'use_sim_time': use_sim_time
         }]
     )
 
@@ -48,8 +57,8 @@ def generate_launch_description():
     twist_mux = Node(
         package="twist_mux",
         executable="twist_mux",
-        parameters=[twist_mux_params],
-        remappings=[('/cmd_vel_out','/cmd_vel')]  # Send to motor_controller
+        parameters=[twist_mux_params, {'use_sim_time': use_sim_time}],
+        remappings=[('/cmd_vel_out','/cmd_vel')]
     )
 
     # Static transforms
@@ -68,8 +77,9 @@ def generate_launch_description():
     )
 
     return LaunchDescription([
+        SetEnvironmentVariable('RCUTILS_LOGGING_BUFFERED_STREAM', '1'),
         rsp,
-        motor_controller,  # GPIO control instead of ros2_control
+        motor_controller,
         keyboard,
         rplidar,
         twist_mux,

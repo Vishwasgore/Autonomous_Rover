@@ -8,23 +8,19 @@ class MotorController(Node):
     def __init__(self):
         super().__init__('motor_controller')
         
-        # L298N GPIO Pins - ADJUST THESE FOR YOUR ROBOT!
+        # L298N GPIO Pins - ENA/ENB connected to 5V (always enabled)
         self.IN1 = 17  # Left Motor Forward
         self.IN2 = 18  # Left Motor Backward
         self.IN3 = 22  # Right Motor Forward  
         self.IN4 = 23  # Right Motor Backward
-        self.ENA = 12  # Left Motor PWM
-        self.ENB = 13  # Right Motor PWM
+        # REMOVED: self.ENA = 12  # Connected to 5V
+        # REMOVED: self.ENB = 13  # Connected to 5V
         
-        # Setup GPIO
+        # Setup GPIO - ONLY control pins needed
         GPIO.setmode(GPIO.BCM)
-        GPIO.setup([self.IN1, self.IN2, self.IN3, self.IN4, self.ENA, self.ENB], GPIO.OUT)
+        GPIO.setup([self.IN1, self.IN2, self.IN3, self.IN4], GPIO.OUT)
         
-        # PWM Setup
-        self.pwm_left = GPIO.PWM(self.ENA, 1000)  # 1kHz frequency
-        self.pwm_right = GPIO.PWM(self.ENB, 1000)
-        self.pwm_left.start(0)
-        self.pwm_right.start(0)
+        # NO PWM setup needed since ENA/ENB are connected to 5V
         
         # Subscribe to cmd_vel
         self.subscription = self.create_subscription(
@@ -33,7 +29,7 @@ class MotorController(Node):
             self.cmd_vel_callback,
             10)
         
-        self.get_logger().info('GPIO Motor Controller Ready - Pins configured')
+        self.get_logger().info('GPIO Motor Controller Ready - ENA/ENB connected to 5V')
     
     def cmd_vel_callback(self, msg):
         linear = msg.linear.x
@@ -43,37 +39,55 @@ class MotorController(Node):
         left_vel = linear - angular * 0.1
         right_vel = linear + angular * 0.1
         
-        # Convert to PWM (0-100)
-        left_pwm = max(-100, min(100, left_vel * 50))
-        right_pwm = max(-100, min(100, right_vel * 50))
+        # Convert to simple forward/backward/stop (no speed control)
+        left_direction = self._velocity_to_direction(left_vel)
+        right_direction = self._velocity_to_direction(right_vel)
         
         # Control motors via GPIO
-        self.drive_motors(left_pwm, right_pwm)
+        self.drive_motors(left_direction, right_direction)
         
-        self.get_logger().info(f'GPIO Control - L: {left_pwm:.1f}%, R: {right_pwm:.1f}%')
+        self.get_logger().info(f'Motor Control - L: {left_direction}, R: {right_direction}')
     
-    def drive_motors(self, left_pwm, right_pwm):
-        # Left motor
-        if left_pwm >= 0:
+    def _velocity_to_direction(self, velocity):
+        """Convert velocity to motor direction"""
+        if velocity > 0.1:  # Forward
+            return "FORWARD"
+        elif velocity < -0.1:  # Backward
+            return "BACKWARD"
+        else:  # Stop
+            return "STOP"
+    
+    def drive_motors(self, left_dir, right_dir):
+        """Control motors via GPIO - ENA/ENB always enabled"""
+        
+        # Left motor control
+        if left_dir == "FORWARD":
             GPIO.output(self.IN1, GPIO.HIGH)
             GPIO.output(self.IN2, GPIO.LOW)
-            self.pwm_left.ChangeDutyCycle(abs(left_pwm))
-        else:
+        elif left_dir == "BACKWARD":
             GPIO.output(self.IN1, GPIO.LOW)
             GPIO.output(self.IN2, GPIO.HIGH)
-            self.pwm_left.ChangeDutyCycle(abs(left_pwm))
+        else:  # STOP
+            GPIO.output(self.IN1, GPIO.LOW)
+            GPIO.output(self.IN2, GPIO.LOW)
         
-        # Right motor
-        if right_pwm >= 0:
+        # Right motor control
+        if right_dir == "FORWARD":
             GPIO.output(self.IN3, GPIO.HIGH)
             GPIO.output(self.IN4, GPIO.LOW)
-            self.pwm_right.ChangeDutyCycle(abs(right_pwm))
-        else:
+        elif right_dir == "BACKWARD":
             GPIO.output(self.IN3, GPIO.LOW)
             GPIO.output(self.IN4, GPIO.HIGH)
-            self.pwm_right.ChangeDutyCycle(abs(right_pwm))
+        else:  # STOP
+            GPIO.output(self.IN3, GPIO.LOW)
+            GPIO.output(self.IN4, GPIO.LOW)
     
     def destroy_node(self):
+        # Stop all motors and cleanup
+        GPIO.output(self.IN1, GPIO.LOW)
+        GPIO.output(self.IN2, GPIO.LOW)
+        GPIO.output(self.IN3, GPIO.LOW)
+        GPIO.output(self.IN4, GPIO.LOW)
         GPIO.cleanup()
         self.get_logger().info('GPIO cleanup completed')
         super().destroy_node()

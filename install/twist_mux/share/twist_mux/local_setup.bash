@@ -1,0 +1,1 @@
+/home/notsoadmin/dev_ws/build/twist_mux/ament_cmake_environment_hooks/local_setup.bash

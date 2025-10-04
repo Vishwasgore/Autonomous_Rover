@@ -1,0 +1,52 @@
+[0.000000] (-) TimerEvent: {}
+[0.000245] (-) JobUnselected: {'identifier': 'articubot_one'}
+[0.000284] (twist_mux) JobQueued: {'identifier': 'twist_mux', 'dependencies': OrderedDict()}
+[0.000327] (twist_mux) JobStarted: {'identifier': 'twist_mux'}
+[0.013547] (twist_mux) JobProgress: {'identifier': 'twist_mux', 'progress': 'cmake'}
+[0.014081] (twist_mux) JobProgress: {'identifier': 'twist_mux', 'progress': 'build'}
+[0.014689] (twist_mux) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/notsoadmin/dev_ws/build/twist_mux', '--', '-j16', '-l16'], 'cwd': '/home/notsoadmin/dev_ws/build/twist_mux', 'env': OrderedDict([('HOSTNAME', 'ros-humble'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/notsoadmin'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/home/notsoadmin/dev_ws/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('XDG_RUNTIME_DIR', '/run/user/0'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('AMENT_PREFIX_PATH', '/home/notsoadmin/dev_ws/install/twist_mux:/home/notsoadmin/dev_ws/install/articubot_one:/opt/ros/humble'), ('PWD', '/home/notsoadmin/dev_ws/build/twist_mux'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/notsoadmin/dev_ws/install/twist_mux:/home/notsoadmin/dev_ws/install/articubot_one:/opt/ros/humble')]), 'shell': False}
+[0.067134] (twist_mux) StdoutLine: {'line': b'[ 33%] Built target twist_marker\n'}
+[0.067345] (twist_mux) StdoutLine: {'line': b'[100%] Built target twist_mux\n'}
+[0.076358] (twist_mux) CommandEnded: {'returncode': 0}
+[0.076889] (twist_mux) JobProgress: {'identifier': 'twist_mux', 'progress': 'install'}
+[0.082035] (twist_mux) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/notsoadmin/dev_ws/build/twist_mux'], 'cwd': '/home/notsoadmin/dev_ws/build/twist_mux', 'env': OrderedDict([('HOSTNAME', 'ros-humble'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/notsoadmin'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/home/notsoadmin/dev_ws/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('XDG_RUNTIME_DIR', '/run/user/0'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('AMENT_PREFIX_PATH', '/home/notsoadmin/dev_ws/install/twist_mux:/home/notsoadmin/dev_ws/install/articubot_one:/opt/ros/humble'), ('PWD', '/home/notsoadmin/dev_ws/build/twist_mux'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/notsoadmin/dev_ws/install/twist_mux:/home/notsoadmin/dev_ws/install/articubot_one:/opt/ros/humble')]), 'shell': False}
+[0.087717] (twist_mux) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.087849] (twist_mux) StdoutLine: {'line': b'-- Up-to-date: /home/notsoadmin/dev_ws/install/twist_mux/lib/twist_mux/twist_mux\n'}
+[0.087897] (twist_mux) StdoutLine: {'line': b'-- Up-to-date: /home/notsoadmin/dev_ws/install/twist_mux/lib/twist_mux/twist_marker\n'}
+[0.087963] (twist_mux) StdoutLine: {'line': b'-- Up-to-date: /home/notsoadmin/dev_ws/install/twist_mux/lib/twist_mux/joystick_relay.py\n'}
+[0.087998] (twist_mux) StdoutLine: {'line': b'-- Up-to-date: /home/notsoadmin/dev_ws/install/twist_mux/share/twist_mux/launch\n'}
+[0.088031] (twist_mux) StdoutLine: {'line': b'-- Up-to-date: /home/notsoadmin/dev_ws/install/twist_mux/share/twist_mux/launch/twist_mux.launch\n'}
+[0.088098] (twist_mux) StdoutLine: {'line': b'-- Up-to-date: /home/notsoadmin/dev_ws/install/twist_mux/share/twist_mux/launch/twist_mux_launch.py\n'}
+[0.088158] (twist_mux) StdoutLine: {'line': b'-- Up-to-date: /home/notsoadmin/dev_ws/install/twist_mux/share/twist_mux/config\n'}
+[0.088191] (twist_mux) StdoutLine: {'line': b'-- Up-to-date: /home/notsoadmin/dev_ws/install/twist_mux/share/twist_mux/config/joystick.yaml\n'}
+[0.088223] (twist_mux) StdoutLine: {'line': b'-- Up-to-date: /home/notsoadmin/dev_ws/install/twist_mux/share/twist_mux/config/twist_mux_locks.yaml\n'}
+[0.088256] (twist_mux) StdoutLine: {'line': b'-- Up-to-date: /home/notsoadmin/dev_ws/install/twist_mux/share/twist_mux/config/twist_mux_topics.yaml\n'}
+[0.088289] (twist_mux) StdoutLine: {'line': b'-- Up-to-date: /home/notsoadmin/dev_ws/install/twist_mux/include\n'}
+[0.088322] (twist_mux) StdoutLine: {'line': b'-- Up-to-date: /home/notsoadmin/dev_ws/install/twist_mux/include/twist_mux\n'}
+[0.088354] (twist_mux) StdoutLine: {'line': b'-- Up-to-date: /home/notsoadmin/dev_ws/install/twist_mux/include/twist_mux/params_helpers.hpp\n'}
+[0.088391] (twist_mux) StdoutLine: {'line': b'-- Up-to-date: /home/notsoadmin/dev_ws/install/twist_mux/include/twist_mux/topic_handle.hpp\n'}
+[0.088423] (twist_mux) StdoutLine: {'line': b'-- Up-to-date: /home/notsoadmin/dev_ws/install/twist_mux/include/twist_mux/twist_mux.hpp\n'}
+[0.088455] (twist_mux) StdoutLine: {'line': b'-- Up-to-date: /home/notsoadmin/dev_ws/install/twist_mux/include/twist_mux/twist_mux_diagnostics.hpp\n'}
+[0.088487] (twist_mux) StdoutLine: {'line': b'-- Up-to-date: /home/notsoadmin/dev_ws/install/twist_mux/include/twist_mux/twist_mux_diagnostics_status.hpp\n'}
+[0.088519] (twist_mux) StdoutLine: {'line': b'-- Up-to-date: /home/notsoadmin/dev_ws/install/twist_mux/include/twist_mux/utils.hpp\n'}
+[0.088551] (twist_mux) StdoutLine: {'line': b'-- Up-to-date: /home/notsoadmin/dev_ws/install/twist_mux/share/ament_index/resource_index/package_run_dependencies/twist_mux\n'}
+[0.088584] (twist_mux) StdoutLine: {'line': b'-- Up-to-date: /home/notsoadmin/dev_ws/install/twist_mux/share/ament_index/resource_index/parent_prefix_path/twist_mux\n'}
+[0.088645] (twist_mux) StdoutLine: {'line': b'-- Up-to-date: /home/notsoadmin/dev_ws/install/twist_mux/share/twist_mux/environment/ament_prefix_path.sh\n'}
+[0.088682] (twist_mux) StdoutLine: {'line': b'-- Up-to-date: /home/notsoadmin/dev_ws/install/twist_mux/share/twist_mux/environment/ament_prefix_path.dsv\n'}
+[0.088714] (twist_mux) StdoutLine: {'line': b'-- Up-to-date: /home/notsoadmin/dev_ws/install/twist_mux/share/twist_mux/environment/path.sh\n'}
+[0.088796] (twist_mux) StdoutLine: {'line': b'-- Up-to-date: /home/notsoadmin/dev_ws/install/twist_mux/share/twist_mux/environment/path.dsv\n'}
+[0.088828] (twist_mux) StdoutLine: {'line': b'-- Up-to-date: /home/notsoadmin/dev_ws/install/twist_mux/share/twist_mux/local_setup.bash\n'}
+[0.088857] (twist_mux) StdoutLine: {'line': b'-- Up-to-date: /home/notsoadmin/dev_ws/install/twist_mux/share/twist_mux/local_setup.sh\n'}
+[0.088887] (twist_mux) StdoutLine: {'line': b'-- Up-to-date: /home/notsoadmin/dev_ws/install/twist_mux/share/twist_mux/local_setup.zsh\n'}
+[0.088916] (twist_mux) StdoutLine: {'line': b'-- Up-to-date: /home/notsoadmin/dev_ws/install/twist_mux/share/twist_mux/local_setup.dsv\n'}
+[0.088946] (twist_mux) StdoutLine: {'line': b'-- Installing: /home/notsoadmin/dev_ws/install/twist_mux/share/twist_mux/package.dsv\n'}
+[0.088974] (twist_mux) StdoutLine: {'line': b'-- Up-to-date: /home/notsoadmin/dev_ws/install/twist_mux/share/ament_index/resource_index/packages/twist_mux\n'}
+[0.089003] (twist_mux) StdoutLine: {'line': b'-- Up-to-date: /home/notsoadmin/dev_ws/install/twist_mux/share/twist_mux/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[0.089032] (twist_mux) StdoutLine: {'line': b'-- Up-to-date: /home/notsoadmin/dev_ws/install/twist_mux/share/twist_mux/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[0.089061] (twist_mux) StdoutLine: {'line': b'-- Up-to-date: /home/notsoadmin/dev_ws/install/twist_mux/share/twist_mux/cmake/twist_muxConfig.cmake\n'}
+[0.089118] (twist_mux) StdoutLine: {'line': b'-- Up-to-date: /home/notsoadmin/dev_ws/install/twist_mux/share/twist_mux/cmake/twist_muxConfig-version.cmake\n'}
+[0.089157] (twist_mux) StdoutLine: {'line': b'-- Up-to-date: /home/notsoadmin/dev_ws/install/twist_mux/share/twist_mux/package.xml\n'}
+[0.090002] (twist_mux) CommandEnded: {'returncode': 0}
+[0.099739] (-) TimerEvent: {}
+[0.100619] (twist_mux) JobEnded: {'identifier': 'twist_mux', 'rc': 0}
+[0.101055] (-) EventReactorShutdown: {}

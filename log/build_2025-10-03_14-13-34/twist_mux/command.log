@@ -1,0 +1,4 @@
+Invoking command in '/home/notsoadmin/dev_ws/build/twist_mux': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/notsoadmin/dev_ws/build/twist_mux -- -j16 -l16
+Invoked command in '/home/notsoadmin/dev_ws/build/twist_mux' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/notsoadmin/dev_ws/build/twist_mux -- -j16 -l16
+Invoking command in '/home/notsoadmin/dev_ws/build/twist_mux': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/notsoadmin/dev_ws/build/twist_mux
+Invoked command in '/home/notsoadmin/dev_ws/build/twist_mux' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/notsoadmin/dev_ws/build/twist_mux

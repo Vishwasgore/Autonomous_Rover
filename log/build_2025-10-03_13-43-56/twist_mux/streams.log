@@ -1,0 +1,42 @@
+[0.016s] Invoking command in '/home/notsoadmin/dev_ws/build/twist_mux': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/notsoadmin/dev_ws/build/twist_mux -- -j16 -l16
+[0.067s] [ 33%] Built target twist_marker
+[0.067s] [100%] Built target twist_mux
+[0.076s] Invoked command in '/home/notsoadmin/dev_ws/build/twist_mux' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/notsoadmin/dev_ws/build/twist_mux -- -j16 -l16
+[0.082s] Invoking command in '/home/notsoadmin/dev_ws/build/twist_mux': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/notsoadmin/dev_ws/build/twist_mux
+[0.087s] -- Install configuration: ""
+[0.088s] -- Up-to-date: /home/notsoadmin/dev_ws/install/twist_mux/lib/twist_mux/twist_mux
+[0.088s] -- Up-to-date: /home/notsoadmin/dev_ws/install/twist_mux/lib/twist_mux/twist_marker
+[0.088s] -- Up-to-date: /home/notsoadmin/dev_ws/install/twist_mux/lib/twist_mux/joystick_relay.py
+[0.088s] -- Up-to-date: /home/notsoadmin/dev_ws/install/twist_mux/share/twist_mux/launch
+[0.088s] -- Up-to-date: /home/notsoadmin/dev_ws/install/twist_mux/share/twist_mux/launch/twist_mux.launch
+[0.088s] -- Up-to-date: /home/notsoadmin/dev_ws/install/twist_mux/share/twist_mux/launch/twist_mux_launch.py
+[0.088s] -- Up-to-date: /home/notsoadmin/dev_ws/install/twist_mux/share/twist_mux/config
+[0.088s] -- Up-to-date: /home/notsoadmin/dev_ws/install/twist_mux/share/twist_mux/config/joystick.yaml
+[0.088s] -- Up-to-date: /home/notsoadmin/dev_ws/install/twist_mux/share/twist_mux/config/twist_mux_locks.yaml
+[0.088s] -- Up-to-date: /home/notsoadmin/dev_ws/install/twist_mux/share/twist_mux/config/twist_mux_topics.yaml
+[0.088s] -- Up-to-date: /home/notsoadmin/dev_ws/install/twist_mux/include
+[0.088s] -- Up-to-date: /home/notsoadmin/dev_ws/install/twist_mux/include/twist_mux
+[0.088s] -- Up-to-date: /home/notsoadmin/dev_ws/install/twist_mux/include/twist_mux/params_helpers.hpp
+[0.088s] -- Up-to-date: /home/notsoadmin/dev_ws/install/twist_mux/include/twist_mux/topic_handle.hpp
+[0.088s] -- Up-to-date: /home/notsoadmin/dev_ws/install/twist_mux/include/twist_mux/twist_mux.hpp
+[0.088s] -- Up-to-date: /home/notsoadmin/dev_ws/install/twist_mux/include/twist_mux/twist_mux_diagnostics.hpp
+[0.088s] -- Up-to-date: /home/notsoadmin/dev_ws/install/twist_mux/include/twist_mux/twist_mux_diagnostics_status.hpp
+[0.088s] -- Up-to-date: /home/notsoadmin/dev_ws/install/twist_mux/include/twist_mux/utils.hpp
+[0.088s] -- Up-to-date: /home/notsoadmin/dev_ws/install/twist_mux/share/ament_index/resource_index/package_run_dependencies/twist_mux
+[0.088s] -- Up-to-date: /home/notsoadmin/dev_ws/install/twist_mux/share/ament_index/resource_index/parent_prefix_path/twist_mux
+[0.088s] -- Up-to-date: /home/notsoadmin/dev_ws/install/twist_mux/share/twist_mux/environment/ament_prefix_path.sh
+[0.088s] -- Up-to-date: /home/notsoadmin/dev_ws/install/twist_mux/share/twist_mux/environment/ament_prefix_path.dsv
+[0.088s] -- Up-to-date: /home/notsoadmin/dev_ws/install/twist_mux/share/twist_mux/environment/path.sh
+[0.088s] -- Up-to-date: /home/notsoadmin/dev_ws/install/twist_mux/share/twist_mux/environment/path.dsv
+[0.089s] -- Up-to-date: /home/notsoadmin/dev_ws/install/twist_mux/share/twist_mux/local_setup.bash
+[0.089s] -- Up-to-date: /home/notsoadmin/dev_ws/install/twist_mux/share/twist_mux/local_setup.sh
+[0.089s] -- Up-to-date: /home/notsoadmin/dev_ws/install/twist_mux/share/twist_mux/local_setup.zsh
+[0.089s] -- Up-to-date: /home/notsoadmin/dev_ws/install/twist_mux/share/twist_mux/local_setup.dsv
+[0.089s] -- Installing: /home/notsoadmin/dev_ws/install/twist_mux/share/twist_mux/package.dsv
+[0.089s] -- Up-to-date: /home/notsoadmin/dev_ws/install/twist_mux/share/ament_index/resource_index/packages/twist_mux
+[0.089s] -- Up-to-date: /home/notsoadmin/dev_ws/install/twist_mux/share/twist_mux/cmake/ament_cmake_export_include_directories-extras.cmake
+[0.089s] -- Up-to-date: /home/notsoadmin/dev_ws/install/twist_mux/share/twist_mux/cmake/ament_cmake_export_dependencies-extras.cmake
+[0.089s] -- Up-to-date: /home/notsoadmin/dev_ws/install/twist_mux/share/twist_mux/cmake/twist_muxConfig.cmake
+[0.089s] -- Up-to-date: /home/notsoadmin/dev_ws/install/twist_mux/share/twist_mux/cmake/twist_muxConfig-version.cmake
+[0.089s] -- Up-to-date: /home/notsoadmin/dev_ws/install/twist_mux/share/twist_mux/package.xml
+[0.090s] Invoked command in '/home/notsoadmin/dev_ws/build/twist_mux' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/notsoadmin/dev_ws/build/twist_mux

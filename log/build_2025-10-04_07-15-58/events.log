@@ -1,0 +1,120 @@
+[0.000000] (-) TimerEvent: {}
+[0.000368] (twist_mux) JobQueued: {'identifier': 'twist_mux', 'dependencies': OrderedDict()}
+[0.000639] (articubot_one) JobQueued: {'identifier': 'articubot_one', 'dependencies': OrderedDict([('twist_mux', '/home/notsoadmin/dev_ws/install/twist_mux')])}
+[0.000976] (twist_mux) JobStarted: {'identifier': 'twist_mux'}
+[0.038967] (twist_mux) JobProgress: {'identifier': 'twist_mux', 'progress': 'cmake'}
+[0.040499] (twist_mux) JobProgress: {'identifier': 'twist_mux', 'progress': 'build'}
+[0.041299] (twist_mux) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/notsoadmin/dev_ws/build/twist_mux', '--', '-j16', '-l16'], 'cwd': '/home/notsoadmin/dev_ws/build/twist_mux', 'env': OrderedDict([('HOSTNAME', 'ros-humble'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/notsoadmin'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/home/notsoadmin/dev_ws/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('XDG_RUNTIME_DIR', '/run/user/0'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('AMENT_PREFIX_PATH', '/home/notsoadmin/dev_ws/install/twist_mux:/home/notsoadmin/dev_ws/install/articubot_one:/opt/ros/humble'), ('PWD', '/home/notsoadmin/dev_ws/build/twist_mux'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/notsoadmin/dev_ws/install/twist_mux:/home/notsoadmin/dev_ws/install/articubot_one:/opt/ros/humble')]), 'shell': False}
+[0.099865] (-) TimerEvent: {}
+[0.200335] (-) TimerEvent: {}
+[0.242551] (twist_mux) StdoutLine: {'line': b'[ 66%] Built target twist_mux\n'}
+[0.245788] (twist_mux) StdoutLine: {'line': b'[100%] Built target twist_marker\n'}
+[0.259583] (twist_mux) CommandEnded: {'returncode': 0}
+[0.260639] (twist_mux) JobProgress: {'identifier': 'twist_mux', 'progress': 'install'}
+[0.272280] (twist_mux) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/notsoadmin/dev_ws/build/twist_mux'], 'cwd': '/home/notsoadmin/dev_ws/build/twist_mux', 'env': OrderedDict([('HOSTNAME', 'ros-humble'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/notsoadmin'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/home/notsoadmin/dev_ws/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('XDG_RUNTIME_DIR', '/run/user/0'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('AMENT_PREFIX_PATH', '/home/notsoadmin/dev_ws/install/twist_mux:/home/notsoadmin/dev_ws/install/articubot_one:/opt/ros/humble'), ('PWD', '/home/notsoadmin/dev_ws/build/twist_mux'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/notsoadmin/dev_ws/install/twist_mux:/home/notsoadmin/dev_ws/install/articubot_one:/opt/ros/humble')]), 'shell': False}
+[0.284582] (twist_mux) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.285885] (twist_mux) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[0.286235] (twist_mux) StdoutLine: {'line': b'-- Up-to-date symlink: /home/notsoadmin/dev_ws/install/twist_mux/lib/twist_mux/twist_mux\n'}
+[0.286606] (twist_mux) StdoutLine: {'line': b'-- Up-to-date symlink: /home/notsoadmin/dev_ws/install/twist_mux/lib/twist_mux/twist_marker\n'}
+[0.286795] (twist_mux) StdoutLine: {'line': b'-- Up-to-date symlink: /home/notsoadmin/dev_ws/install/twist_mux/lib/twist_mux/joystick_relay.py\n'}
+[0.287087] (twist_mux) StdoutLine: {'line': b'-- Up-to-date symlink: /home/notsoadmin/dev_ws/install/twist_mux/share/twist_mux/launch/twist_mux.launch\n'}
+[0.287338] (twist_mux) StdoutLine: {'line': b'-- Up-to-date symlink: /home/notsoadmin/dev_ws/install/twist_mux/share/twist_mux/launch/twist_mux_launch.py\n'}
+[0.287678] (twist_mux) StdoutLine: {'line': b'-- Up-to-date symlink: /home/notsoadmin/dev_ws/install/twist_mux/share/twist_mux/config/joystick.yaml\n'}
+[0.287773] (twist_mux) StdoutLine: {'line': b'-- Up-to-date symlink: /home/notsoadmin/dev_ws/install/twist_mux/share/twist_mux/config/twist_mux_locks.yaml\n'}
+[0.287865] (twist_mux) StdoutLine: {'line': b'-- Up-to-date symlink: /home/notsoadmin/dev_ws/install/twist_mux/share/twist_mux/config/twist_mux_topics.yaml\n'}
+[0.287925] (twist_mux) StdoutLine: {'line': b'-- Up-to-date symlink: /home/notsoadmin/dev_ws/install/twist_mux/include/twist_mux/params_helpers.hpp\n'}
+[0.288022] (twist_mux) StdoutLine: {'line': b'-- Up-to-date symlink: /home/notsoadmin/dev_ws/install/twist_mux/include/twist_mux/topic_handle.hpp\n'}
+[0.288128] (twist_mux) StdoutLine: {'line': b'-- Up-to-date symlink: /home/notsoadmin/dev_ws/install/twist_mux/include/twist_mux/twist_mux.hpp\n'}
+[0.288182] (twist_mux) StdoutLine: {'line': b'-- Up-to-date symlink: /home/notsoadmin/dev_ws/install/twist_mux/include/twist_mux/twist_mux_diagnostics.hpp\n'}
+[0.288265] (twist_mux) StdoutLine: {'line': b'-- Up-to-date symlink: /home/notsoadmin/dev_ws/install/twist_mux/include/twist_mux/twist_mux_diagnostics_status.hpp\n'}
+[0.288352] (twist_mux) StdoutLine: {'line': b'-- Up-to-date symlink: /home/notsoadmin/dev_ws/install/twist_mux/include/twist_mux/utils.hpp\n'}
+[0.288474] (twist_mux) StdoutLine: {'line': b'-- Up-to-date symlink: /home/notsoadmin/dev_ws/install/twist_mux/share/ament_index/resource_index/package_run_dependencies/twist_mux\n'}
+[0.288641] (twist_mux) StdoutLine: {'line': b'-- Up-to-date symlink: /home/notsoadmin/dev_ws/install/twist_mux/share/ament_index/resource_index/parent_prefix_path/twist_mux\n'}
+[0.288802] (twist_mux) StdoutLine: {'line': b'-- Up-to-date symlink: /home/notsoadmin/dev_ws/install/twist_mux/share/twist_mux/environment/ament_prefix_path.sh\n'}
+[0.288934] (twist_mux) StdoutLine: {'line': b'-- Up-to-date symlink: /home/notsoadmin/dev_ws/install/twist_mux/share/twist_mux/environment/ament_prefix_path.dsv\n'}
+[0.289080] (twist_mux) StdoutLine: {'line': b'-- Up-to-date symlink: /home/notsoadmin/dev_ws/install/twist_mux/share/twist_mux/environment/path.sh\n'}
+[0.289200] (twist_mux) StdoutLine: {'line': b'-- Up-to-date symlink: /home/notsoadmin/dev_ws/install/twist_mux/share/twist_mux/environment/path.dsv\n'}
+[0.289330] (twist_mux) StdoutLine: {'line': b'-- Up-to-date symlink: /home/notsoadmin/dev_ws/install/twist_mux/share/twist_mux/local_setup.bash\n'}
+[0.289466] (twist_mux) StdoutLine: {'line': b'-- Up-to-date symlink: /home/notsoadmin/dev_ws/install/twist_mux/share/twist_mux/local_setup.sh\n'}
+[0.289592] (twist_mux) StdoutLine: {'line': b'-- Up-to-date symlink: /home/notsoadmin/dev_ws/install/twist_mux/share/twist_mux/local_setup.zsh\n'}
+[0.289704] (twist_mux) StdoutLine: {'line': b'-- Up-to-date symlink: /home/notsoadmin/dev_ws/install/twist_mux/share/twist_mux/local_setup.dsv\n'}
+[0.289799] (twist_mux) StdoutLine: {'line': b'-- Symlinking: /home/notsoadmin/dev_ws/install/twist_mux/share/twist_mux/package.dsv\n'}
+[0.300490] (-) TimerEvent: {}
+[0.301964] (twist_mux) StdoutLine: {'line': b'-- Up-to-date symlink: /home/notsoadmin/dev_ws/install/twist_mux/share/ament_index/resource_index/packages/twist_mux\n'}
+[0.302259] (twist_mux) StdoutLine: {'line': b'-- Up-to-date symlink: /home/notsoadmin/dev_ws/install/twist_mux/share/twist_mux/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[0.302566] (twist_mux) StdoutLine: {'line': b'-- Up-to-date symlink: /home/notsoadmin/dev_ws/install/twist_mux/share/twist_mux/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[0.302742] (twist_mux) StdoutLine: {'line': b'-- Up-to-date symlink: /home/notsoadmin/dev_ws/install/twist_mux/share/twist_mux/cmake/twist_muxConfig.cmake\n'}
+[0.302918] (twist_mux) StdoutLine: {'line': b'-- Up-to-date symlink: /home/notsoadmin/dev_ws/install/twist_mux/share/twist_mux/cmake/twist_muxConfig-version.cmake\n'}
+[0.303064] (twist_mux) StdoutLine: {'line': b'-- Up-to-date symlink: /home/notsoadmin/dev_ws/install/twist_mux/share/twist_mux/package.xml\n'}
+[0.305545] (twist_mux) CommandEnded: {'returncode': 0}
+[0.328892] (twist_mux) JobEnded: {'identifier': 'twist_mux', 'rc': 0}
+[0.329910] (articubot_one) JobStarted: {'identifier': 'articubot_one'}
+[0.341887] (articubot_one) JobProgress: {'identifier': 'articubot_one', 'progress': 'cmake'}
+[0.343176] (articubot_one) JobProgress: {'identifier': 'articubot_one', 'progress': 'build'}
+[0.343575] (articubot_one) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/notsoadmin/dev_ws/build/articubot_one', '--', '-j16', '-l16'], 'cwd': '/home/notsoadmin/dev_ws/build/articubot_one', 'env': OrderedDict([('HOSTNAME', 'ros-humble'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/notsoadmin'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/home/notsoadmin/dev_ws/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('XDG_RUNTIME_DIR', '/run/user/0'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('AMENT_PREFIX_PATH', '/home/notsoadmin/dev_ws/install/twist_mux:/home/notsoadmin/dev_ws/install/articubot_one:/opt/ros/humble'), ('PWD', '/home/notsoadmin/dev_ws/build/articubot_one'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/notsoadmin/dev_ws/install/twist_mux:/home/notsoadmin/dev_ws/install/articubot_one:/opt/ros/humble')]), 'shell': False}
+[0.378244] (articubot_one) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.400607] (-) TimerEvent: {}
+[0.501028] (-) TimerEvent: {}
+[0.533728] (articubot_one) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[0.545571] (articubot_one) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[0.601273] (-) TimerEvent: {}
+[0.636772] (articubot_one) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[0.641036] (articubot_one) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[0.641648] (articubot_one) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[0.642090] (articubot_one) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[0.644066] (articubot_one) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[0.645686] (articubot_one) StdoutLine: {'line': b'-- Configuring done\n'}
+[0.651986] (articubot_one) StdoutLine: {'line': b'-- Generating done\n'}
+[0.654693] (articubot_one) StdoutLine: {'line': b'-- Build files have been written to: /home/notsoadmin/dev_ws/build/articubot_one\n'}
+[0.681175] (articubot_one) CommandEnded: {'returncode': 0}
+[0.682206] (articubot_one) JobProgress: {'identifier': 'articubot_one', 'progress': 'install'}
+[0.683395] (articubot_one) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/notsoadmin/dev_ws/build/articubot_one'], 'cwd': '/home/notsoadmin/dev_ws/build/articubot_one', 'env': OrderedDict([('HOSTNAME', 'ros-humble'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/notsoadmin'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/home/notsoadmin/dev_ws/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('XDG_RUNTIME_DIR', '/run/user/0'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('AMENT_PREFIX_PATH', '/home/notsoadmin/dev_ws/install/twist_mux:/home/notsoadmin/dev_ws/install/articubot_one:/opt/ros/humble'), ('PWD', '/home/notsoadmin/dev_ws/build/articubot_one'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/notsoadmin/dev_ws/install/twist_mux:/home/notsoadmin/dev_ws/install/articubot_one:/opt/ros/humble')]), 'shell': False}
+[0.693212] (articubot_one) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.694529] (articubot_one) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[0.694966] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/config/drive_bot.rviz\n'}
+[0.695268] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/config/empty.yaml\n'}
+[0.695578] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/config/mapper_params_online_async.yaml\n'}
+[0.695670] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/config/my_controller.yaml\n'}
+[0.695734] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/config/nav2_params.yaml\n'}
+[0.695925] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/config/new_bot.rviz\n'}
+[0.696065] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/config/twist_mux.yaml\n'}
+[0.696135] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/config/view_bot.rviz\n'}
+[0.696194] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/description/gazebo_control.xacro\n'}
+[0.696255] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/description/inertial_macros.xacro\n'}
+[0.696322] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/description/lidar.xacro\n'}
+[0.696443] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/description/robot.urdf.xacro\n'}
+[0.696520] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/description/robot_core.xacro\n'}
+[0.696579] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/launch/joystick.launch.py\n'}
+[0.696635] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/launch/launch_robot.launch.py\n'}
+[0.696804] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/launch/launch_sim.launch.py\n'}
+[0.696931] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/launch/localization.launch.py\n'}
+[0.696993] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/launch/navigation_launch.py\n'}
+[0.697053] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/launch/online_async_slam.launch.py\n'}
+[0.697109] (articubot_one) StdoutLine: {'line': b'-- Symlinking: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/launch/real_hardware.launch.py\n'}
+[0.701452] (-) TimerEvent: {}
+[0.706084] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/launch/rplidar.launch.py\n'}
+[0.706351] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/launch/rsp.launch.py\n'}
+[0.706527] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/worlds/empty.world\n'}
+[0.706675] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/worlds/obstacles.world\n'}
+[0.706962] (articubot_one) StdoutLine: {'line': b'-- Symlinking: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/motor_controller.py\n'}
+[0.718608] (articubot_one) StdoutLine: {'line': b'-- Symlinking: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/test_gpio.py\n'}
+[0.730540] (articubot_one) StdoutLine: {'line': b'-- Symlinking: /home/notsoadmin/dev_ws/install/articubot_one/lib/articubot_one/motor_controller.py\n'}
+[0.741311] (articubot_one) StdoutLine: {'line': b'-- Symlinking: /home/notsoadmin/dev_ws/install/articubot_one/lib/articubot_one/test_gpio.py\n'}
+[0.750244] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /home/notsoadmin/dev_ws/install/articubot_one/share/ament_index/resource_index/package_run_dependencies/articubot_one\n'}
+[0.750456] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /home/notsoadmin/dev_ws/install/articubot_one/share/ament_index/resource_index/parent_prefix_path/articubot_one\n'}
+[0.750637] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/environment/ament_prefix_path.sh\n'}
+[0.750779] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/environment/ament_prefix_path.dsv\n'}
+[0.750920] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/environment/path.sh\n'}
+[0.751059] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/environment/path.dsv\n'}
+[0.751250] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/local_setup.bash\n'}
+[0.751455] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/local_setup.sh\n'}
+[0.751641] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/local_setup.zsh\n'}
+[0.751834] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/local_setup.dsv\n'}
+[0.751972] (articubot_one) StdoutLine: {'line': b'-- Symlinking: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/package.dsv\n'}
+[0.763894] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /home/notsoadmin/dev_ws/install/articubot_one/share/ament_index/resource_index/packages/articubot_one\n'}
+[0.764153] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/cmake/articubot_oneConfig.cmake\n'}
+[0.764277] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/cmake/articubot_oneConfig-version.cmake\n'}
+[0.764424] (articubot_one) StdoutLine: {'line': b'-- Up-to-date symlink: /home/notsoadmin/dev_ws/install/articubot_one/share/articubot_one/package.xml\n'}
+[0.766535] (articubot_one) CommandEnded: {'returncode': 0}
+[0.780191] (articubot_one) JobEnded: {'identifier': 'articubot_one', 'rc': 0}
+[0.780964] (-) EventReactorShutdown: {}

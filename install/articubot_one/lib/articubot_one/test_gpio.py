@@ -1,0 +1,1 @@
+/home/notsoadmin/dev_ws/src/articubot_one/scripts/test_gpio.py

@@ -30,17 +30,39 @@ def generate_launch_description():
         )])
     )
 
-    # RPLIDAR (Real sensor)
-    rplidar = Node(
-        package='rplidar_ros',
-        executable='rplidar_node',
-        name='rplidar_node',
+    # YDLIDAR with correct parameters from your reference
+    ydlidar = Node(
+        package='ydlidar_ros2_driver',
+        executable='ydlidar_ros2_driver_node',
+        name='ydlidar_node',
+        output='screen',
         parameters=[{
-            'serial_port': '/dev/ttyUSB0',
+            'port': '/dev/ttyUSB0',
             'frame_id': 'laser_frame',
-            'angle_compensate': True,
-            'scan_mode': 'Standard'
-        }]
+            'ignore_array': "",
+            'baudrate': 230400,           # Changed from serial_baudrate
+            'lidar_type': 1,              # Specific to your LIDAR model
+            'device_type': 0,
+            'isSingleChannel': False,
+            'intensity': False,
+            'intensity_bit': 0,
+            'sample_rate': 9,
+            'abnormal_check_count': 4,
+            'fixed_resolution': True,
+            'reversion': False,
+            'inverted': False,
+            'auto_reconnect': True,
+            'support_motor_dtr': False,   # Changed from True
+            'angle_max': 180.0,
+            'angle_min': -180.0,
+            'range_max': 64.0,            # Increased from 16.0
+            'range_min': 0.01,            # More precise
+            'frequency': 10.0,
+            'invalid_range_is_inf': False,
+            'debug': False
+        }],
+        respawn=True,
+        respawn_delay=3.0
     )
 
     # Twist Mux
@@ -71,7 +93,7 @@ def generate_launch_description():
         rsp,
         motor_controller,  # GPIO control instead of ros2_control
         keyboard,
-        rplidar,
+        ydlidar,
         twist_mux,
         base_to_laser,
         base_footprint_transform,

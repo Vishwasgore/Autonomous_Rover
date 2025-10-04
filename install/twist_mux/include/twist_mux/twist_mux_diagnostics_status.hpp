@@ -1,1 +1,0 @@
-/home/notsoadmin/dev_ws/src/twist_mux/include/twist_mux/twist_mux_diagnostics_status.hpp

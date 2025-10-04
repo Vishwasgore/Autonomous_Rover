@@ -1,1 +1,0 @@
-/home/notsoadmin/dev_ws/src/articubot_one/launch/real_hardware.launch.py

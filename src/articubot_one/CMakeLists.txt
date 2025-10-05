@@ -17,6 +17,8 @@ endif()
 
 # find dependencies
 find_package(ament_cmake REQUIRED)
+find_package(ament_cmake_python REQUIRED)
+
 # uncomment the following section in order to fill in
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
@@ -32,31 +34,35 @@ if(BUILD_TESTING)
   ament_lint_auto_find_test_dependencies()
 endif()
 
-# Install directories
-install(
-  DIRECTORY config description launch worlds
-  DESTINATION share/${PROJECT_NAME}
-)
-
-# ==================== ADD THESE LINES FOR PYTHON SCRIPTS ====================
+# ==================== PYTHON SCRIPT INSTALLATION ====================
 # Create scripts directory if it doesn't exist
 if(NOT EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/scripts)
   file(MAKE_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/scripts)
 endif()
 
-# Install Python scripts for GPIO motor control
+# Install all Python scripts as executables
+install(PROGRAMS
+  scripts/mpu6050_driver.py
+  scripts/motor_controller.py
+  scripts/test_gpio.py
+  DESTINATION lib/${PROJECT_NAME}
+)
+
+# Install launch files, config, and other resources
 install(
-  DIRECTORY scripts/
+  DIRECTORY 
+    config 
+    description 
+    launch 
+    worlds
   DESTINATION share/${PROJECT_NAME}
 )
 
-# Install individual Python scripts
+# Install the entire scripts directory for development
 install(
-  PROGRAMS
-    scripts/motor_controller.py
-    scripts/test_gpio.py
-  DESTINATION lib/${PROJECT_NAME}
+  DIRECTORY scripts/
+  DESTINATION share/${PROJECT_NAME}/scripts
 )
-# ============================================================================
+# ====================================================================
 
 ament_package()

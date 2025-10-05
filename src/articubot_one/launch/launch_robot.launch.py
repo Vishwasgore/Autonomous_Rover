@@ -8,11 +8,14 @@ from launch.launch_description_sources import PythonLaunchDescriptionSource
 def generate_launch_description():
     package_name = 'articubot_one'
 
-    # Robot State Publisher
+    # Robot State Publisher - Make sure it's not publishing the same transforms
     rsp = IncludeLaunchDescription(
         PythonLaunchDescriptionSource([os.path.join(
             get_package_share_directory(package_name),'launch','rsp.launch.py'
-        )]), launch_arguments={'use_sim_time': 'false', 'use_ros2_control': 'false'}.items()
+        )]), launch_arguments={
+            'use_sim_time': 'false', 
+            'use_ros2_control': 'false'
+        }.items()
     )
 
     # GPIO Motor Controller
@@ -23,7 +26,7 @@ def generate_launch_description():
         output='screen'
     )
 
-    # MPU6050 IMU Driver - UNCOMMENTED
+    # MPU6050 IMU Driver
     mpu6050_driver = Node(
         package=package_name,
         executable='mpu6050_driver.py',
@@ -31,7 +34,7 @@ def generate_launch_description():
         output='screen'
     )
 
-    # IMU Filter
+    # IMU Filter - FIXED parameters to avoid TF conflicts
     imu_filter = Node(
         package='imu_filter_madgwick',
         executable='imu_filter_madgwick_node',
@@ -39,10 +42,10 @@ def generate_launch_description():
         output='screen',
         parameters=[{
             'use_mag': False,
-            'world_frame': 'enu',
+            'world_frame': 'odom',  # Changed from 'enu' to 'odom'
             'fixed_frame': 'imu_link',
-            'publish_tf': True,
-            'publish_debug_topics': True,
+            'publish_tf': False,    # Set to False - we'll handle TF separately
+            'publish_debug_topics': False,
         }],
         remappings=[
             ('/imu/data_raw', '/imu/data'),
@@ -50,7 +53,7 @@ def generate_launch_description():
         ]
     )
 
-    # Simple IMU to Odometry converter (USE THIS INSTEAD OF EKF)
+    # Simple IMU to Odometry converter
     imu_to_odom = Node(
         package=package_name,
         executable='imu_to_odom.py',
@@ -87,7 +90,7 @@ def generate_launch_description():
         remappings=[('/cmd_vel_out','/cmd_vel')]
     )
 
-    # Static transforms
+    # Static transforms - ONLY ONE SET OF STATIC TRANSFORMS
     base_to_laser = Node(
         package='tf2_ros',
         executable='static_transform_publisher',
@@ -95,12 +98,13 @@ def generate_launch_description():
         arguments=['0', '0', '0.1', '0', '0', '0', 'base_link', 'laser_frame']
     )
     
-    base_footprint_transform = Node(
-        package='tf2_ros',
-        executable='static_transform_publisher',
-        name='base_footprint_to_base_link',
-        arguments=['0', '0', '0', '0', '0', '0', 'base_footprint', 'base_link']
-    )
+    # Only include base_footprint_to_base_link if your URDF doesn't already have it
+    # base_footprint_transform = Node(
+    #     package='tf2_ros',
+    #     executable='static_transform_publisher',
+    #     name='base_footprint_to_base_link',
+    #     arguments=['0', '0', '0', '0', '0', '0', 'base_footprint', 'base_link']
+    # )
 
     base_to_imu = Node(
         package='tf2_ros',
@@ -112,13 +116,13 @@ def generate_launch_description():
     return LaunchDescription([
         rsp,
         motor_controller,
-        mpu6050_driver,  # UNCOMMENTED
+        mpu6050_driver,
         imu_filter,
-        imu_to_odom,     # USING SIMPLE ODOM INSTEAD OF EKF
+        imu_to_odom,
         keyboard,
         rplidar,
         twist_mux,
         base_to_laser,
-        base_footprint_transform,
+        # base_footprint_transform,  # Commented out - might be duplicate
         base_to_imu,
     ])

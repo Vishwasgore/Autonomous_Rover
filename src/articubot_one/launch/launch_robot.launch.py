@@ -8,19 +8,56 @@ from launch.launch_description_sources import PythonLaunchDescriptionSource
 def generate_launch_description():
     package_name = 'articubot_one'
 
-    # Robot State Publisher - NO ros2_control for real hardware
+    # Robot State Publisher
     rsp = IncludeLaunchDescription(
         PythonLaunchDescriptionSource([os.path.join(
             get_package_share_directory(package_name),'launch','rsp.launch.py'
         )]), launch_arguments={'use_sim_time': 'false', 'use_ros2_control': 'false'}.items()
     )
 
-    # GPIO Motor Controller (REAL HARDWARE) - REPLACES ros2_control
+    # GPIO Motor Controller
     motor_controller = Node(
         package=package_name,
         executable='motor_controller.py',
         name='motor_controller',
         output='screen'
+    )
+
+    # MPU6050 IMU Driver
+    mpu6050_driver = Node(
+        package=package_name,
+        executable='mpu6050_driver.py',
+        name='mpu6050_driver',
+        output='screen'
+    )
+
+    # IMU Filter
+    imu_filter = Node(
+        package='imu_filter_madgwick',
+        executable='imu_filter_madgwick_node',
+        name='imu_filter',
+        output='screen',
+        parameters=[{
+            'use_mag': False,
+            'world_frame': 'enu',
+            'fixed_frame': 'imu_link',
+            'publish_tf': True,
+            'publish_debug_topics': True,
+        }],
+        remappings=[
+            ('/imu/data_raw', '/imu/data'),
+            ('/imu/data', '/imu/filtered')
+        ]
+    )
+
+    # Robot Localization (EKF for odometry)
+    ekf_config = os.path.join(get_package_share_directory(package_name), 'config', 'ekf.yaml')
+    robot_localization = Node(
+        package='robot_localization',
+        executable='ekf_node',
+        name='ekf_filter_node',
+        output='screen',
+        parameters=[ekf_config]
     )
 
     # Keyboard control
@@ -30,7 +67,7 @@ def generate_launch_description():
         )])
     )
 
-    # RPLIDAR (Real sensor)
+    # RPLIDAR
     rplidar = Node(
         package='rplidar_ros',
         executable='rplidar_node',
@@ -49,7 +86,7 @@ def generate_launch_description():
         package="twist_mux",
         executable="twist_mux",
         parameters=[twist_mux_params],
-        remappings=[('/cmd_vel_out','/cmd_vel')]  # Send to motor_controller
+        remappings=[('/cmd_vel_out','/cmd_vel')]
     )
 
     # Static transforms
@@ -67,12 +104,23 @@ def generate_launch_description():
         arguments=['0', '0', '0', '0', '0', '0', 'base_footprint', 'base_link']
     )
 
+    base_to_imu = Node(
+        package='tf2_ros',
+        executable='static_transform_publisher',
+        name='base_to_imu',
+        arguments=['0', '0', '0.05', '0', '0', '0', 'base_link', 'imu_link']
+    )
+
     return LaunchDescription([
         rsp,
-        motor_controller,  # GPIO control instead of ros2_control
+        motor_controller,
+        mpu6050_driver,
+        imu_filter,
+        robot_localization,
         keyboard,
         rplidar,
         twist_mux,
         base_to_laser,
         base_footprint_transform,
+        base_to_imu,
     ])

@@ -22,6 +22,22 @@ class MPU6050Driver(Node):
         self.frame_id = self.get_parameter('frame_id').value
         self.publish_rate = self.get_parameter('publish_rate').value
         
+        # ========== YOUR CALIBRATION DATA ==========
+        # Gyroscope offsets (in raw sensor units)
+        self.gyro_offset_x = -1.69418
+        self.gyro_offset_y = 1.98037
+        self.gyro_offset_z = -0.547328
+        
+        # Accelerometer offsets (in raw sensor units)
+        self.accel_offset_x = -1.6805
+        self.accel_offset_y = 0.413677
+        self.accel_offset_z = 10.4005
+        # ===========================================
+        
+        self.get_logger().info("Using pre-calibrated IMU offsets")
+        self.get_logger().info(f"Gyro offsets: X={self.gyro_offset_x}, Y={self.gyro_offset_y}, Z={self.gyro_offset_z}")
+        self.get_logger().info(f"Accel offsets: X={self.accel_offset_x}, Y={self.accel_offset_y}, Z={self.accel_offset_z}")
+        
         # IMU publisher
         self.imu_pub = self.create_publisher(Imu, 'imu/data', 10)
         
@@ -36,13 +52,10 @@ class MPU6050Driver(Node):
         # Initialize MPU6050
         self.init_mpu6050()
         
-        # Calibration
-        self.calibrate_sensors()
-        
         # Timer for publishing
         self.timer = self.create_timer(1.0/self.publish_rate, self.publish_imu_data)
         
-        self.get_logger().info('MPU6050 driver started successfully')
+        self.get_logger().info('MPU6050 driver started successfully with pre-calibration')
     
     def init_mpu6050(self):
         """Initialize MPU6050 registers"""
@@ -64,44 +77,6 @@ class MPU6050Driver(Node):
             
         except Exception as e:
             self.get_logger().error(f"Failed to initialize MPU6050: {e}")
-    
-    def calibrate_sensors(self):
-        """Simple calibration - collect offset data"""
-        self.get_logger().info("Calibrating MPU6050... Please keep the sensor stationary!")
-        
-        num_samples = 100
-        gyro_offsets = [0.0, 0.0, 0.0]
-        accel_offsets = [0.0, 0.0, 0.0]
-        
-        for i in range(num_samples):
-            try:
-                # Read raw data
-                accel_data = self.read_accelerometer_raw()
-                gyro_data = self.read_gyroscope_raw()
-                
-                gyro_offsets[0] += gyro_data[0]
-                gyro_offsets[1] += gyro_data[1]
-                gyro_offsets[2] += gyro_data[2]
-                
-                accel_offsets[0] += accel_data[0]
-                accel_offsets[1] += accel_data[1]
-                accel_offsets[2] += (accel_data[2] - 16384)  # Remove gravity from Z
-                
-                time.sleep(0.01)
-                
-            except Exception as e:
-                self.get_logger().warn(f"Calibration sample {i} failed: {e}")
-        
-        # Calculate averages
-        self.gyro_offset_x = gyro_offsets[0] / num_samples
-        self.gyro_offset_y = gyro_offsets[1] / num_samples
-        self.gyro_offset_z = gyro_offsets[2] / num_samples
-        
-        self.accel_offset_x = accel_offsets[0] / num_samples
-        self.accel_offset_y = accel_offsets[1] / num_samples
-        self.accel_offset_z = accel_offsets[2] / num_samples
-        
-        self.get_logger().info("Calibration completed!")
     
     def read_word(self, reg_high, reg_low):
         """Read two bytes and combine them"""
@@ -134,7 +109,7 @@ class MPU6050Driver(Node):
             accel_raw = self.read_accelerometer_raw()
             gyro_raw = self.read_gyroscope_raw()
             
-            # Apply calibration offsets
+            # Apply YOUR calibration offsets
             accel_x = (accel_raw[0] - self.accel_offset_x) / 16384.0  # ±2g range
             accel_y = (accel_raw[1] - self.accel_offset_y) / 16384.0
             accel_z = (accel_raw[2] - self.accel_offset_z) / 16384.0

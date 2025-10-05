@@ -139,11 +139,27 @@ class MPU6050Driver(Node):
             imu_msg.angular_velocity.y = gyro_y_rad
             imu_msg.angular_velocity.z = gyro_z_rad
             
-            # MPU6050 doesn't provide orientation directly
-            # Set covariance matrices (adjust based on your sensor quality)
-            imu_msg.linear_acceleration_covariance = [0.04, 0, 0, 0, 0.04, 0, 0, 0, 0.04]
-            imu_msg.angular_velocity_covariance = [0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02]
-            imu_msg.orientation_covariance = [-1, 0, 0, 0, 0, 0, 0, 0, 0]  # -1 means unknown
+            # FIXED: Proper covariance matrices (must be lists with exactly 9 floats)
+            # Linear acceleration covariance (m/s²)²
+            imu_msg.linear_acceleration_covariance = [
+                0.04, 0.0, 0.0,
+                0.0, 0.04, 0.0, 
+                0.0, 0.0, 0.04
+            ]
+            
+            # Angular velocity covariance (rad/s)²
+            imu_msg.angular_velocity_covariance = [
+                0.02, 0.0, 0.0,
+                0.0, 0.02, 0.0,
+                0.0, 0.0, 0.02
+            ]
+            
+            # Orientation covariance (rad²) - unknown for MPU6050
+            imu_msg.orientation_covariance = [
+                -1.0, 0.0, 0.0,
+                0.0, 0.0, 0.0,
+                0.0, 0.0, 0.0
+            ]
             
             self.imu_pub.publish(imu_msg)
             

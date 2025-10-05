@@ -45,6 +45,7 @@ install(PROGRAMS
   scripts/mpu6050_driver.py
   scripts/motor_controller.py
   scripts/test_gpio.py
+  scripts/imu_to_odom.py  # ADD THIS LINE
   DESTINATION lib/${PROJECT_NAME}
 )
 

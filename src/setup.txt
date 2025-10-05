@@ -1,0 +1,48 @@
+# Make sure all scripts are executable
+chmod +x ~/Autonomous_Rover/src/articubot_one/scripts/mpu6050_driver.py
+chmod +x ~/Autonomous_Rover/src/articubot_one/scripts/motor_controller.py
+chmod +x ~/Autonomous_Rover/src/articubot_one/scripts/test_gpio.py
+chmod +x ~/Autonomous_Rover/src/articubot_one/scripts/imu_to_odom.py
+
+# Clean build (to ensure everything is rebuilt)
+cd ~/Autonomous_Rover
+rm -rf build install log
+
+# Rebuild
+colcon build --packages-select articubot_one
+
+# Source the workspace
+source install/setup.bash
+
+
+
+# Check if all scripts are installed
+ls ~/Autonomous_Rover/install/articubot_one/lib/articubot_one/
+
+# You should see:
+# imu_to_odom.py  mpu6050_driver.py  motor_controller.py  test_gpio.py
+
+# Test if the new script can be found by ROS
+ros2 run articubot_one imu_to_odom.py
+
+
+
+# Launch everything
+ros2 launch articubot_one launch_robot.launch.py
+
+
+# Check if all nodes are running
+ros2 node list
+
+# Check if odom topic exists
+ros2 topic list | grep odom
+
+# Check IMU data flow
+ros2 topic echo /imu/data
+ros2 topic echo /imu/filtered
+
+# Check odometry data
+ros2 topic echo /odom
+
+# Check TF tree
+ros2 run tf2_tools view_frames.py

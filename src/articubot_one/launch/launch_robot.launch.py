@@ -23,7 +23,7 @@ def generate_launch_description():
         output='screen'
     )
 
-    # MPU6050 IMU Driver
+    # MPU6050 IMU Driver - UNCOMMENTED
     mpu6050_driver = Node(
         package=package_name,
         executable='mpu6050_driver.py',
@@ -50,14 +50,12 @@ def generate_launch_description():
         ]
     )
 
-    # Robot Localization (EKF for odometry)
-    ekf_config = os.path.join(get_package_share_directory(package_name), 'config', 'ekf.yaml')
-    robot_localization = Node(
-        package='robot_localization',
-        executable='ekf_node',
-        name='ekf_filter_node',
-        output='screen',
-        parameters=[ekf_config]
+    # Simple IMU to Odometry converter (USE THIS INSTEAD OF EKF)
+    imu_to_odom = Node(
+        package=package_name,
+        executable='imu_to_odom.py',
+        name='imu_to_odom',
+        output='screen'
     )
 
     # Keyboard control
@@ -114,9 +112,9 @@ def generate_launch_description():
     return LaunchDescription([
         rsp,
         motor_controller,
-        mpu6050_driver,
+        mpu6050_driver,  # UNCOMMENTED
         imu_filter,
-        robot_localization,
+        imu_to_odom,     # USING SIMPLE ODOM INSTEAD OF EKF
         keyboard,
         rplidar,
         twist_mux,
